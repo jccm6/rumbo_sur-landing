@@ -820,9 +820,7 @@ body {
 
 @media (max-width: 1024px) {
 	.hero {
-		background:
-			linear-gradient(rgba(244, 247, 252, 0.92), rgba(244, 247, 252, 0.92)),
-			url("assets/hero.png") no-repeat center center;
+		background: url("assets/hero.png") no-repeat center center;
 		background-size: cover;
 	}
 
