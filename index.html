@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Rumbo Sur | Envíos Puerta a Puerta a Venezuela desde Santiago</title>
+		<!-- Google Font Inter -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+		<!-- Stylesheet -->
+		<link rel="stylesheet" href="styles.css" />
+		<!-- Lucide Icons via CDN -->
+		<script src="https://unpkg.com/lucide@latest"></script>
+		<link rel="icon" type="image/x-icon" href="assets/favicon.png" />
+	</head>
+	<body>
+		<!-- ==========================================================================
+       ANNOUNCEMENT BAR
+       ========================================================================== -->
+		<div class="announcement-bar">
+			<i data-lucide="zap"></i>
+			<span>PRÓXIMA SALIDA — Aéreo: Jueves | Marítimo: 2 veces al mes — ¡Agenda tu retiro en Santiago!</span>
+		</div>
+
+		<!-- ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== -->
+		<header class="header">
+			<div class="container">
+				<a href="#" class="logo-group">
+					<img src="assets/logo.png" alt="Logo de Rumbo Sur" width="140px" />
+					<!-- <i data-lucide="compass"></i>
+					<span>Rumbo Sur</span> -->
+				</a>
+
+				<button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+					<i data-lucide="menu"></i>
+				</button>
+
+				<ul class="nav-links" id="navLinks">
+					<li><a href="#servicios">Servicios</a></li>
+					<li><a href="#nosotros">Sobre Nosotros</a></li>
+					<li><a href="#contacto">Contacto</a></li>
+				</ul>
+
+				<a href="#contacto" class="header-cta">Cotizar Envío</a>
+			</div>
+		</header>
+
+		<!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== -->
+		<section class="hero">
+			<div class="container">
+				<div class="hero-content">
+					<div class="hero-badge">
+						<div class="vzla-mini-flag">
+							<div class="stripe-yellow"></div>
+							<div class="stripe-blue"></div>
+							<div class="stripe-red"></div>
+						</div>
+						<span>ENVÍOS PUERTA A PUERTA - VENEZUELA</span>
+					</div>
+
+					<h1 class="hero-title">Tus envíos a Venezuela desde Santiago de forma fácil y segura</h1>
+
+					<p class="hero-subtitle">
+						Llevamos tus paquetes, carga comercial y mudanzas desde Santiago de Chile hasta la puerta de tu hogar en Venezuela (Caracas, Maracaibo, Valencia, Barquisimeto, Maracay
+						y más). Ofrecemos retiro gratis en Santiago y una conexión humana y segura con tu familia.
+					</p>
+
+					<!-- Interactive Logistics Widget -->
+					<div class="logistics-widget">
+						<div class="widget-tabs">
+							<button class="widget-tab active" id="tabCotizarBtn">Cotizar Caja</button>
+							<button class="widget-tab" id="tabRastrearBtn">Rastrear Envío</button>
+						</div>
+
+						<!-- Tab 1: Cotizar -->
+						<form class="tab-pane active" id="paneCotizar" onsubmit="event.preventDefault()">
+							<div class="form-row">
+								<div class="input-container">
+									<i data-lucide="map-pin"></i>
+									<select id="originSelect" aria-label="Origen del envío">
+										<option value="santiago">Origen: Santiago, CL (Zenteno)</option>
+									</select>
+								</div>
+								<div class="input-container">
+									<i data-lucide="send"></i>
+									<select id="destinationSelect" aria-label="Destino del envío">
+										<option value="caracas">Destino: Caracas, DF</option>
+										<option value="maracaibo">Destino: Maracaibo, Zulia</option>
+										<option value="valencia">Destino: Valencia, Carabobo</option>
+										<option value="barquisimeto">Destino: Barquisimeto, Lara</option>
+										<option value="maracay">Destino: Maracay, Aragua</option>
+										<option value="oriente">Destino: Oriente de Venezuela</option>
+										<option value="occidente">Destino: Occidente de Venezuela</option>
+										<option value="centro">Destino: Centro de Venezuela</option>
+									</select>
+								</div>
+							</div>
+							<button type="button" class="widget-btn" id="calcTarifaBtn">
+								<i data-lucide="calculator"></i>
+								<span>Calcular Tarifa por WhatsApp</span>
+							</button>
+						</form>
+
+						<!-- Tab 2: Rastrear -->
+						<form class="tab-pane" id="paneRastrear" onsubmit="event.preventDefault()">
+							<div class="form-row">
+								<div class="input-container" style="flex: 1">
+									<i data-lucide="search"></i>
+									<input type="text" id="trackingCodeInput" placeholder="Ingresa tu código de guía (Ej: RS-9082)" aria-label="Código de seguimiento" />
+								</div>
+							</div>
+							<button type="button" class="widget-btn" id="rastrearBtn">
+								<i data-lucide="compass"></i>
+								<span>Buscar Envío</span>
+							</button>
+						</form>
+					</div>
+
+					<!-- Highlights Row -->
+					<div class="hero-highlights">
+						<div class="highlight-item">
+							<i data-lucide="plane"></i>
+							<span>Envío Aéreo</span>
+						</div>
+						<div class="highlight-item">
+							<i data-lucide="ship"></i>
+							<span>Envío Marítimo</span>
+						</div>
+						<div class="highlight-item">
+							<i data-lucide="truck"></i>
+							<span>Retiro en Santiago</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ==========================================================================
+       SERVICES SECTION
+       ========================================================================== -->
+		<section class="services" id="servicios">
+			<div class="container">
+				<div class="section-header">
+					<span class="section-subtitle">Nuestros Servicios</span>
+					<h2 class="section-title">Servicios de Logística Hechos a tu Medida</h2>
+					<p class="section-desc">Ofrecemos soluciones integrales y personalizadas para que enviar tus paquetes a Venezuela sea tan fácil como entregárnoslos.</p>
+				</div>
+
+				<div class="services-container">
+					<!-- Row 1: 4 Cards -->
+					<div class="services-row-1">
+						<div class="service-card">
+							<div class="service-icon-box">
+								<i data-lucide="plane"></i>
+							</div>
+							<h3>Envíos Aéreos</h3>
+							<p>La forma más rápida de enviar a Venezuela. Salidas semanales con entregas en oficinas a nivel nacional en alianza exclusiva con Zoom.</p>
+						</div>
+
+						<div class="service-card">
+							<div class="service-icon-box">
+								<i data-lucide="ship"></i>
+							</div>
+							<h3>Envíos Marítimos</h3>
+							<p>La opción más económica y confiable para cajas grandes, mudanzas y carga comercial sin límite de peso o volumen.</p>
+						</div>
+
+						<div class="service-card">
+							<div class="service-icon-box">
+								<i data-lucide="truck"></i>
+							</div>
+							<h3>Retiro a Domicilio Gratis</h3>
+							<p>No te muevas de tu casa. Retiramos tus cajas y paquetes de forma gratuita en Santiago de Chile, coordinando a tu horario.</p>
+						</div>
+
+						<div class="service-card">
+							<div class="service-icon-box">
+								<i data-lucide="zap"></i>
+							</div>
+							<h3>Marítimo Express</h3>
+							<p>Lo mejor de dos mundos: la rapidez del aéreo combinada con las tarifas económicas del marítimo. Entregas en 30 días continuos.</p>
+						</div>
+					</div>
+
+					<!-- Row 2: 3 Cards -->
+					<div class="services-row-2">
+						<div class="service-card">
+							<div class="service-icon-box">
+								<i data-lucide="package"></i>
+							</div>
+							<h3>Mudanzas a Venezuela</h3>
+							<p>Traslado seguro de tus enseres personales y hogar completo. Nos encargamos del embalaje, carga y asesoramiento aduanero.</p>
+						</div>
+
+						<div class="service-card">
+							<div class="service-icon-box">
+								<i data-lucide="briefcase"></i>
+							</div>
+							<h3>Carga Comercial</h3>
+							<p>Soluciones de importación y exportación de mercancías para empresas y emprendedores con tarifas corporativas especiales.</p>
+						</div>
+
+						<div class="service-card">
+							<div class="service-icon-box">
+								<i data-lucide="globe"></i>
+							</div>
+							<h3>Importaciones desde China</h3>
+							<p>Te brindamos asesoría personalizada y soporte de transporte para traer mercancía directamente desde China a Chile o Venezuela.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ==========================================================================
+       ABOUT US SECTION
+       ========================================================================== -->
+		<section class="about" id="nosotros">
+			<div class="container">
+				<div class="about-image-col">
+					<div class="about-image-wrapper">
+						<img
+							src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=80"
+							alt="Personal de logística preparando paquetes de envío en bodega"
+						/>
+					</div>
+				</div>
+				<div class="about-content-col">
+					<div class="about-badge">
+						<span>SOBRE RUMBO SUR</span>
+					</div>
+					<h2 class="about-title">Conectamos Hogares y Negocios con Seguridad</h2>
+					<p class="about-desc">
+						En Rumbo Sur nos dedicamos con pasión a conectar a la comunidad de venezolanos en Chile con sus familias y seres queridos en Venezuela, brindando tranquilidad en cada
+						envío aéreo y marítimo desde nuestras oficinas en Zenteno, Santiago.
+					</p>
+					<p class="about-desc">
+						Nos diferenciamos por ofrecer una asesoría totalmente personalizada. Entendemos que cada paquete tiene un valor emocional y comercial incalculable, por eso facilitamos
+						todo el proceso con retiro gratuito y seguimiento continuo.
+					</p>
+					<div class="about-bullets">
+						<div class="about-bullet-row">
+							<i data-lucide="check"></i>
+							<span>Oficinas Físicas en Zenteno (Santiago Centro) para tu total tranquilidad.</span>
+						</div>
+						<div class="about-bullet-row">
+							<i data-lucide="check"></i>
+							<span>Asesoría Personalizada y soporte humano durante todo el trayecto.</span>
+						</div>
+						<div class="about-bullet-row">
+							<i data-lucide="check"></i>
+							<span>Garantía de entrega puerta a puerta en toda Venezuela.</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ==========================================================================
+       CONTACT SECTION
+       ========================================================================== -->
+		<section class="contact" id="contacto">
+			<div class="container">
+				<div class="contact-info-col">
+					<h2 class="contact-title">Visítanos en Santiago</h2>
+					<p class="contact-desc">
+						Nuestras oficinas están estratégicamente ubicadas en Zenteno, en el centro de Santiago. Ven de manera segura a entregar tu caja o a recibir asesoría para tus envíos
+						comerciales.
+					</p>
+					<div class="map-wrapper">
+						<img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=800&q=80" alt="Mapa satelital e ilustración urbana de Santiago Centro" />
+					</div>
+					<div class="contact-details-grid">
+						<div class="contact-detail-row">
+							<i data-lucide="map-pin"></i>
+							<span>Dirección: Zenteno 183, Santiago Centro, Región Metropolitana</span>
+						</div>
+						<div class="contact-detail-row">
+							<i data-lucide="calendar"></i>
+							<span>Horario: Lunes a Viernes de 09:00 a 19:00 hrs | Sabados cerrados | Domingos de 09:00 a 15:30 </span>
+						</div>
+						<div class="contact-detail-row">
+							<i data-lucide="phone"></i>
+							<span>WhatsApp: +56 9 8438 0640 </span>
+						</div>
+					</div>
+				</div>
+
+				<div class="contact-card-col">
+					<div class="contact-card">
+						<div class="contact-card-badge">
+							<span>RESPUESTA INMEDIATA</span>
+						</div>
+						<h3>¿Tienes dudas? Hablemos ahora</h3>
+						<p>
+							Escríbenos directamente por WhatsApp. Te cotizamos al instante según el peso y medidas de tu caja, coordinamos el retiro gratuito a domicilio en Santiago, y
+							entregamos puerta a puerta en toda Venezuela (Oriente, Occidente y Centro).
+						</p>
+						<a href="#" class="contact-cta-btn" id="contactWhatsAppBtn">
+							<i data-lucide="message-circle"></i>
+							<span>Iniciar Chat por WhatsApp</span>
+						</a>
+						<p class="contact-email">O envíanos un correo a: contacto@rumbosur.cl</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ==========================================================================
+       FOOTER SECTION
+       ========================================================================== -->
+		<footer class="footer">
+			<div class="container">
+				<div class="footer-top">
+					<!-- <a href="#" class="footer-logo-group">
+						<i data-lucide="compass"></i>
+						<span>Rumbo Sur</span>
+					</a> -->
+					<ul class="footer-links">
+						<li><a href="#servicios">Servicios</a></li>
+						<li><a href="#nosotros">Sobre Nosotros</a></li>
+						<li><a href="#contacto">Contacto</a></li>
+					</ul>
+				</div>
+				<div class="footer-bottom">
+					<p>© 2026 Rumbo Sur. Todos los derechos reservados. Zenteno, Santiago de Chile.</p>
+					<p>Envíos puerta a puerta de confianza.</p>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Script File -->
+		<script src="script.js"></script>
+		<!-- Initialize Lucide Icons -->
+		<script>
+			lucide.createIcons();
+		</script>
+	</body>
+</html>
